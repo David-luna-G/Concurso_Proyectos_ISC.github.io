@@ -1,700 +1,867 @@
-<!-- SEO Básico -->
-<meta name="description" content="XVIII Concurso de Proyectos de Innovación Tecnológica - Academia de ISC, TSJ Zapopan.">
-<meta name="keywords" content="concurso, proyectos, innovacion, sistemas computacionales, zapopan, tsj">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Open Graph / Redes Sociales -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="XVIII Concurso de Proyectos ISC - TSJ Zapopan">
-<meta property="og:description" content="Presentación y concurso de proyectos de innovación de la carrera de Ingeniería en Sistemas Computacionales.">
-<meta property="og:image" content="https://<TU_USUARIO>.github.io/Concurso_Proyectos_ISC/assets/img/og-preview.webp">
-<meta property="og:url" content="https://<TU_USUARIO>.github.io/Concurso_Proyectos_ISC/">
-
-  <img src="assets/img/logo.webp" alt="Logo Concurso ISC" width="200" height="60" loading="lazy">
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="./assets/img/logotsj.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>XX Concurso de Proyectos de Innovación</title>
+  
+  <!-- SEO Básico -->
+  <title>XX Concurso de Proyectos de Innovación | TecMM Campus Zapopan</title>
+  <meta name="description" content="Evento académico y tecnológico semestral de la Ingeniería en Sistemas Computacionales del TecMM Zapopan. Exposición de prototipos de software, hardware e innovación." />
+  <meta name="keywords" content="TecMM, Concurso de Innovación, Ingeniería en Sistemas, Zapopan, Software, Tecnología, Proyectos Universitarios" />
+  <meta name="author" content="Academia de Ingeniería en Sistemas Computacionales - TecMM Zapopan" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Bootstrap & Icons -->
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zapopan.tecmm.edu.mx/concurso-innovacion" />
+  <meta property="og:title" content="XX Concurso de Proyectos de Innovación | TecMM Zapopan" />
+  <meta property="og:description" content="Descubre las soluciones tecnológicas y de software creadas por estudiantes de Ingeniería en Sistemas Computacionales." />
+  <meta property="og:image" content="./assets/img/banner.png" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="XX Concurso de Proyectos de Innovación" />
+  <meta name="twitter:description" content="Exposición de tecnología, prototipos y desarrollo de software de la comunidad estudiantil de Zapopan." />
+  <meta name="twitter:image" content="./assets/img/banner.png" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/img/logotsj.png" type="image/x-icon">
+
+  <!-- Bootstrap & FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tipografías: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
     :root {
-    /* Paleta Oficial extraída de tecmm.edu.mx */
-    --primary: #33157A;    /* Morado intenso institucional */
-    --accent: #E52E71;     /* Rosa/Fucsia para botones de llamada a la acción (CTA) */
-    --secondary: #1E208A;  /* Índigo oscuro para gradientes y fondos secundarios */
-    --dark: #1f1f1f;
-    --gray: #6c757d;
-    --bg: #f8f9fb;         /* Fondo gris muy claro para limpieza */
-    --radius: 12px;
-}
-
-    body{
-      font-family:'Inter',system-ui,sans-serif;
-      background:var(--bg);
-      color:var(--dark);
-      line-height:1.7;
+      --bg-main: #f8fafc;
+      --bg-surface: #ffffff;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #64748b;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --tech-blue: #2563eb;
+      --tech-blue-hover: #1d4ed8;
+      --tech-glow: rgba(37, 99, 235, 0.14);
+      --border-tech: rgba(37, 99, 235, 0.22);
+      --border-subtle: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
     }
 
-    h1,h2,h3,h4{font-weight:800;letter-spacing:-0.5px}
-
-    /* ===== NAVBAR ===== */
-    .navbar{
-      backdrop-filter:blur(10px);
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--gray-800);
+      line-height: 1.65;
+      background-image: 
+        radial-gradient(var(--gray-200) 1px, transparent 1px),
+        linear-gradient(to right, rgba(226, 232, 240, 0.3) 1px, transparent 1px);
+      background-size: 24px 24px, 120px 120px;
     }
 
-    /* ===== HERO ===== */
-    .hero{
-      min-height:90vh;
-      background:url('./assets/img/banner.png') center/cover no-repeat;
-      position:relative;
-      color:#fff;
-      display:flex;
-      align-items:center;
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--tech-blue);
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 9999;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0 0 6px 0;
+      transition: top 0.2s;
     }
-    .hero::before{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(33,22,64,.85),rgba(33,22,64,.45));
-    }
-    .hero-content{position:relative;z-index:2}
+    .skip-link:focus { top: 0; }
 
-    .hero h1{font-size:clamp(2.4rem,4vw,3.8rem)}
-
-    /* ===== CUENTA REGRESIVA ===== */
-.countdown-section {
-  /* Gradiente morado a índigo usando tus variables institucionales */
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  padding: 3rem 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  position: relative;
-  z-index: 10;
-}
-
-.countdown-box {
-  background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius);
-  padding: 1.2rem 0.5rem;
-  backdrop-filter: blur(10px); /* Efecto cristal */
-  color: white;
-}
-
-.countdown-box span {
-  display: block;
-  font-size: clamp(2rem, 4vw, 3.5rem); /* Se adapta a móviles y PC */
-  font-weight: 800;
-  line-height: 1;
-  color: var(--accent); /* El fucsia vibrante del TecMM */
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 10px rgba(229, 46, 113, 0.3); /* Resplandor */
-}
-
-.countdown-box small {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 0.8rem;
-  opacity: 0.9;
-}
-
-    .btn-primary{
-      background:var(--accent);
-      border:none;
-      color:#fffcfc;
-      border-radius:var(--radius);
-      padding:.85rem 2rem;
-      font-weight:700;
-      transition:.3s;
-    }
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--gray-900);
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
-    /* ===== SECCIONES ===== */
-    section{padding:5rem 0}
-
-    .section-title{
-      text-align:center;
-      margin-bottom:3rem;
-    }
-    .section-title p{max-width:720px;margin:auto;color:var(--gray)}
-
-    /* ===== CARDS ===== */
-    .card{
-      border:none;
-      border-radius:var(--radius);
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
     }
 
-    /* ===== PROGRAMA ===== */
-    .program-time{
-      font-weight:700;color:var(--primary)
+    .navbar {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-tech);
     }
 
-    /* ===== LABS ===== */
-    .lab-card img{
-      border-radius:12px;
-      border:2px solid #e6e6e6;
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      background: #eff6ff;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      color: var(--tech-blue);
+      font-weight: 600;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
     }
 
-    /* ===== PERSONAS ===== */
+    .hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+      padding: 7rem 0 4rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .btn-tech {
+      background: var(--tech-blue);
+      color: #ffffff;
+      border: 1px solid var(--tech-blue);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px var(--tech-glow);
+    }
+    .btn-tech:hover {
+      background: var(--tech-blue-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-tech-outline {
+      background: #ffffff;
+      color: var(--gray-800);
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      transition: all 0.2s ease;
+    }
+    .btn-tech-outline:hover {
+      border-color: var(--tech-blue);
+      color: var(--tech-blue);
+      background: #f8fafc;
+    }
+
+    .countdown-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-tech);
+      padding: 2.5rem 0;
+    }
+    .countdown-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-tech);
+      border-radius: var(--radius-sm);
+      padding: 1rem 0.5rem;
+      text-align: center;
+    }
+    .countdown-box span {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .countdown-box small {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      color: var(--tech-blue);
+    }
+
+    section { padding: 5rem 0; }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title h2 { font-size: 2.1rem; }
+    .section-title p {
+      max-width: 680px;
+      margin: 0.5rem auto 0;
+      color: var(--gray-600);
+    }
+
+    .card-tech {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+    }
+    .card-tech:hover {
+      border-color: var(--border-tech);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .impact-card {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      color: #f8fafc;
+      border-radius: var(--radius);
+    }
+
+    .tech-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: #eff6ff;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tech-blue);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--gray-200);
+    }
+    .schedule-item:last-child { border-bottom: none; }
+    .program-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--tech-blue);
+      background: #f1f5f9;
+      border: 1px solid var(--gray-200);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      margin-right: 1rem;
+      min-width: 68px;
+      text-align: center;
+    }
+
     .person-card {
-      border: 1px solid rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
       overflow: hidden;
+      height: 100%;
+      transition: all 0.25s ease;
     }
     .person-card:hover {
-      transform: translateY(-5px);
+      border-color: var(--border-tech);
+      transform: translateY(-4px);
     }
     .person-card img {
-      height: 250px; /* Un poco más alto para mejor proporción */
+      height: 230px;
+      width: 100%;
       object-fit: cover;
-      object-position: top; /* Asegura que no se corten las cabezas */
+      object-position: top;
+      filter: grayscale(15%);
+      transition: filter 0.3s ease;
+    }
+    .person-card:hover img {
+      filter: grayscale(0%);
     }
 
-    /* ===== CTA ===== */
-    .cta{
-      background:linear-gradient(90deg,var(--primary),#7f54d8);
-      color:#fff;
-      text-align:center;
-      border-radius:var(--radius);
-      padding:4rem 2rem;
+    .cta {
+      background: #ffffff;
+      border: 1px solid var(--border-tech);
+      border-radius: var(--radius);
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
-    /* ===== FOOTER ===== */
-    footer{
-      background:#111;color:#ddd
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-    footer a{color:#bbb;text-decoration:none}
-    footer a:hover{color:#fff}
+    footer a { color: #cbd5e1; text-decoration: none; }
+    footer a:hover { color: #38bdf8; }
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="./assets/img/logotsj.png" width="42" class="me-2">
-      <strong>Concurso de Proyectos de Innovación</strong>
-    </a>
-  </div>
-</nav>
+<!-- Enlace de salto accesible para lectores de pantalla y navegación por teclado -->
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
-<!-- HERO -->
-<header class="hero" id="inicio">
-  <div class="container hero-content">
-    <h1 class="mb-3">XX Concurso de Proyectos de Innovación</h1>
-    <p class="lead mb-4">Un espacio académico para mostrar creatividad, tecnología e impacto social.</p>
-    <a href="#programa" class="btn btn-primary btn-lg">Ver programa</a>
-  </div>
+<!-- ENCABEZADO Y NAVEGACIÓN -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="./assets/img/logotsj.png" width="36" height="36" class="me-2" alt="Logotipo institucional TecMM Zapopan">
+        <strong>XX Concurso de Innovación</strong>
+      </a>
+      
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <div class="status-badge d-none d-sm-inline-flex font-mono" role="status" aria-label="Estado del evento">
+          <span class="status-dot" aria-hidden="true"></span> ISC • EDICIÓN XX
+        </div>
+        <a href="#programa" class="btn btn-sm btn-tech">Ver Agenda</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="mb-3">
+            <span class="status-badge font-mono mb-2">
+              <i class="fa-solid fa-code-branch me-1" aria-hidden="true"></i> INGENIERÍA EN SISTEMAS COMPUTACIONALES
+            </span>
+          </div>
+          <h1 id="hero-title" class="mb-3 text-dark">
+            XX Concurso de Proyectos <br class="d-none d-md-block"> de <span style="color: var(--tech-blue);">Innovación</span>
+          </h1>
+          <p class="lead text-secondary mx-auto mb-4" style="max-width: 650px;">
+            Plataforma académica para el despliegue de soluciones de software, hardware e impacto tecnológico real desarrolladas por la comunidad estudiantil.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#programa" class="btn btn-tech">
+              <i class="fa-regular fa-calendar-check me-2" aria-hidden="true"></i>Ver Programa
+            </a>
+            <button class="btn btn-tech-outline" data-bs-toggle="modal" data-bs-target="#posterModal" aria-haspopup="dialog">
+              <i class="fa-regular fa-file-pdf me-2 text-primary" aria-hidden="true"></i>Póster Oficial
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </header>
 
+<!-- CONTENIDO PRINCIPAL -->
+<main id="contenido-principal">
 
-<!-- CUENTA REGRESIVA -->
-<section class="countdown-section">
-  <div class="container">
-    <div class="row text-center justify-content-center align-items-center">
-      <div class="col-12 mb-4">
-        <h3 class="fw-bold text-white mb-0">El evento comienza en:</h3>
-      </div>
-      
-      <!-- Cajas de tiempo -->
-      <div class="col-6 col-md-2 mb-3 mb-md-0">
-        <div class="countdown-box">
-          <span id="cd-days">00</span>
-          <small>Días</small>
+  <!-- CUENTA REGRESIVA DINÁMICA -->
+  <section class="countdown-section" aria-labelledby="countdown-title">
+    <div class="container">
+      <div class="row text-center justify-content-center align-items-center g-3">
+        <div class="col-12 mb-2">
+          <h2 id="countdown-title" class="font-mono text-uppercase text-secondary h6" style="letter-spacing: 1px;">
+            <i class="fa-regular fa-clock me-1 text-primary" aria-hidden="true"></i> Tiempo restante para el inicio
+          </h2>
         </div>
-      </div>
-      <div class="col-6 col-md-2 mb-3 mb-md-0">
-        <div class="countdown-box">
-          <span id="cd-hours">00</span>
-          <small>Horas</small>
-        </div>
-      </div>
-      <div class="col-6 col-md-2 mb-3 mb-md-0">
-        <div class="countdown-box">
-          <span id="cd-minutes">00</span>
-          <small>Minutos</small>
-        </div>
-      </div>
-      <div class="col-6 col-md-2 mb-3 mb-md-0">
-        <div class="countdown-box">
-          <span id="cd-seconds">00</span>
-          <small>Segundos</small>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<div class="text-center my-5">
-  <button class="btn btn-primary btn-lg"
-          data-bs-toggle="modal"
-          data-bs-target="#posterModal">
-    <i class="fa-solid fa-image me-2"></i>
-    Ver póster del evento
-  </button>
-</div>
-
-<!-- BIENVENIDA 
-<section id="bienvenida">
-  <div class="container">
-    <div class="section-title">
-      <h2>Bienvenidas y Bienvenidos</h2>
-      <p>Evento académico semestral que promueve la innovación, la vinculación y el aprendizaje basado en proyectos.</p>
-    </div>
-    <div class="card p-4 p-md-5">
-      <p>El Concurso de Proyectos de Innovación del Instituto Tecnológico José Mario Molina Pasquel y Henríquez UA Zapopan reúne a estudiantes, docentes y sector productivo para presentar soluciones tecnológicas a problemáticas reales.</p>
-      <p>Este espacio fomenta la creatividad, el trabajo colaborativo y la retroalimentación experta.</p>
-    </div>
-  </div>
-</section>-->
-<!-- BIENVENIDA REFACTORIZADA -->
-<section id="bienvenida">
-  <div class="container">
-    <div class="section-title">
-      <h2>Bienvenidas y Bienvenidos</h2>
-      <p>Evento académico semestral que promueve la innovación, la vinculación y el aprendizaje basado en proyectos.</p>
-    </div>
-
-    <div class="row align-items-center g-5">
-      <!-- Columna Izquierda: Texto e Íconos -->
-      <div class="col-lg-6">
-        <h3 class="mb-3" style="color: var(--primary);">Soluciones tecnológicas a problemáticas reales</h3>
-        <p class="lead text-muted mb-4">
-          El Concurso de Proyectos de Innovación de la academia de Sistemas Computacionales es el ecosistema ideal donde convergen:
-        </p>
         
-        <ul class="list-unstyled mt-4">
-          <li class="mb-4 d-flex align-items-start">
-            <div class="text-center me-3" style="width: 40px;">
-              <i class="fa-solid fa-user-graduate fa-2x" style="color: var(--accent);"></i>
-            </div>
-            <div>
-              <h5 class="mb-1">Estudiantes</h5>
-              <p class="text-muted mb-0">Demuestran las competencias adquiridas durante el semestre mediante proyectos funcionales.</p>
-            </div>
-          </li>
-          
-          <li class="mb-4 d-flex align-items-start">
-            <div class="text-center me-3" style="width: 40px;">
-              <i class="fa-solid fa-chalkboard-user fa-2x" style="color: var(--accent);"></i>
-            </div>
-            <div>
-              <h5 class="mb-1">Docentes y Expertos</h5>
-              <p class="text-muted mb-0">Brindan retroalimentación técnica, evalúan el nivel de innovación y guían el desarrollo.</p>
-            </div>
-          </li>
-          
-          <li class="mb-2 d-flex align-items-start">
-            <div class="text-center me-3" style="width: 40px;">
-              <i class="fa-solid fa-handshake fa-2x" style="color: var(--accent);"></i>
-            </div>
-            <div>
-              <h5 class="mb-1">Sector Productivo</h5>
-              <p class="text-muted mb-0">Empresas aliadas descubren nuevo talento y evalúan la viabilidad comercial de las ideas.</p>
-            </div>
-          </li>
-        </ul>
+        <!-- Bloque accesible para lectores de pantalla -->
+        <div class="col-12">
+          <ul class="row list-unstyled justify-content-center g-3 mb-0" role="timer" aria-live="polite">
+            <li class="col-6 col-sm-3 col-md-2">
+              <div class="countdown-box">
+                <span id="cd-days">00</span>
+                <small>Días</small>
+              </div>
+            </li>
+            <li class="col-6 col-sm-3 col-md-2">
+              <div class="countdown-box">
+                <span id="cd-hours">00</span>
+                <small>Horas</small>
+              </div>
+            </li>
+            <li class="col-6 col-sm-3 col-md-2">
+              <div class="countdown-box">
+                <span id="cd-minutes">00</span>
+                <small>Minutos</small>
+              </div>
+            </li>
+            <li class="col-6 col-sm-3 col-md-2">
+              <div class="countdown-box">
+                <span id="cd-seconds">00</span>
+                <small>Segundos</small>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Columna Derecha: Tarjeta de Impacto -->
-      <div class="col-lg-6">
-        <div class="card p-5 border-0 text-center shadow-lg" style="background-color: var(--primary); color: white; border-radius: var(--radius);">
-          <i class="fa-solid fa-lightbulb fa-4x mb-4" style="color: var(--accent);"></i>
-          <h4 class="fw-bold">Nuestra Misión</h4>
-          <p class="mt-3" style="font-size: 1.1rem; opacity: 0.9;">
-            Fomentar la creatividad, el trabajo colaborativo y la excelencia técnica, preparando a los futuros Ingenieros en Sistemas para los retos del mañana.
+  <!-- BIENVENIDA Y PROPÓSITO -->
+  <section id="bienvenida" aria-labelledby="bienvenida-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="bienvenida-title">Ecosistema de Innovación</h2>
+        <p>Espacio semestral orientado a la experimentación técnica y el aprendizaje basado en proyectos de ingeniería.</p>
+      </header>
+
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <h3 class="mb-3 text-dark h4">Soluciones técnicas a problemáticas reales</h3>
+          <p class="text-secondary mb-4">
+            El Concurso de Proyectos de Innovación de la academia de Sistemas Computacionales articula tres pilares:
           </p>
           
-          <hr class="border-light opacity-25 w-75 mx-auto my-4">
-          
-          <!-- Datos Rápidos -->
-          <div class="d-flex justify-content-evenly mt-3">
-            <div>
-              <h2 class="mb-0 fw-bold" style="color: var(--accent);">XX</h2>
-              <small class="text-uppercase tracking-wide" style="letter-spacing: 2px;">Edición</small>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-3 p-3 rounded bg-white border border-light-subtle">
+              <div class="tech-icon-wrapper" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h4 class="mb-1 text-dark h6 fw-bold">Estudiantes</h4>
+                <p class="text-secondary mb-0 small">Demuestran competencias adquiridas durante el semestre desarrollando software funcional y prototipos escalables.</p>
+              </div>
+            </li>
+            
+            <li class="d-flex align-items-start gap-3 p-3 rounded bg-white border border-light-subtle">
+              <div class="tech-icon-wrapper" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h4 class="mb-1 text-dark h6 fw-bold">Docentes y Mentores</h4>
+                <p class="text-secondary mb-0 small">Brindan retroalimentación técnica, evalúan arquitecturas de software y validan la rigurosidad metodológica.</p>
+              </div>
+            </li>
+            
+            <li class="d-flex align-items-start gap-3 p-3 rounded bg-white border border-light-subtle">
+              <div class="tech-icon-wrapper" aria-hidden="true">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div>
+                <h4 class="mb-1 text-dark h6 fw-bold">Sector Productivo</h4>
+                <p class="text-secondary mb-0 small">Empresas líderes descubren talento emergente y evalúan la factibilidad comercial y de mercado de las propuestas.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="col-lg-6" aria-label="Misión y estadísticas">
+          <div class="impact-card p-4 p-md-5">
+            <div class="d-inline-block p-2 rounded mb-3" style="background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3);">
+              <i class="fa-solid fa-microchip fs-3 text-info" aria-hidden="true"></i>
             </div>
-            <div style="border-left: 1px solid rgba(255,255,255,0.2);"></div>
-            <div>
-              <h2 class="mb-0 fw-bold" style="color: var(--accent);">ISC</h2>
-              <small class="text-uppercase tracking-wide" style="letter-spacing: 2px;">Carrera</small>
+            <h3 class="fw-bold text-white mb-3 h4">Misión Formativa</h3>
+            <p class="text-light opacity-75 small mb-4">
+              Fomentar la creatividad, el pensamiento computacional y la excelencia técnica, preparando a los futuros Ingenieros en Sistemas para los desafíos de la industria 4.0.
+            </p>
+            
+            <hr style="border-color: rgba(255,255,255,0.15);" class="my-4">
+            
+            <div class="row text-center font-mono g-2">
+              <div class="col-6">
+                <div class="h2 mb-0 fw-bold text-info">XX</div>
+                <small class="text-secondary text-uppercase" style="font-size: 0.72rem; letter-spacing: 1px;">Edición Consecutiva</small>
+              </div>
+              <div class="col-6" style="border-left: 1px solid rgba(255,255,255,0.1);">
+                <div class="h2 mb-0 fw-bold text-info">ISC</div>
+                <small class="text-secondary text-uppercase" style="font-size: 0.72rem; letter-spacing: 1px;">Sistemas Computacionales</small>
+              </div>
             </div>
           </div>
-          
-        </div>
+        </aside>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROGRAMA -->
-<section id="programa" class="bg-white">
-  <div class="container">
-    <div class="section-title">
-      <h2>Programa del Evento</h2>
-      <p>25 de noviembre de 2026</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card p-4 h-100">
-          <h4>Mañana</h4>
-          <p><span class="program-time">09:00</span> Inauguración</p>
-          <p><span class="program-time">09:20</span> Exposición de proyectos</p>
-          <p><span class="program-time">10:00</span> Coffee Break</p>
-          <p><span class="program-time">10:20</span> Exposición de proyectos</p>
-          <p><span class="program-time">13:00</span> Entrega Reconocimientos</p>
-          <p><span class="program-time">13:20</span> Toma Fotografia Evento Edificio "L"</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-4 h-100">
-          <h4>Vespertino</h4>
-          <p><span class="program-time">16:00</span> Exposición de proyectos</p>
-          <p><span class="program-time">19:00</span> Coffee Break</p>
-          <p><span class="program-time">19:30</span> Entrega Reconocimientos</p>
-          <p><span class="program-time">20:00</span> Toma Fotografia Evento Edificio "L"</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- PROGRAMA / AGENDA -->
+  <section id="programa" class="bg-white border-top border-bottom border-light-subtle" aria-labelledby="programa-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="programa-title">Programa del Evento</h2>
+        <p class="font-mono text-primary fw-medium">
+          <time datetime="2026-11-25"><i class="fa-regular fa-calendar me-1" aria-hidden="true"></i> 25 de noviembre de 2026</time>
+        </p>
+      </header>
+      
+      <div class="row g-4 justify-content-center">
+        <!-- Turno Mañana -->
+        <div class="col-md-6 col-lg-5">
+          <article class="card-tech p-4 h-100" aria-labelledby="turno-matutino-title">
+            <header class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+              <h3 id="turno-matutino-title" class="mb-0 fw-bold text-dark h5">
+                <i class="fa-regular fa-sun me-2 text-primary" aria-hidden="true"></i>Turno Matutino
+              </h3>
+              <span class="badge bg-light text-secondary border font-mono">09:00 - 13:20</span>
+            </header>
 
-<!-- LABORATORIOS -->
-<section id="labs">
-  <div class="container">
-    <div class="section-title">
-      <h2> Distribución de Laboratorios | XX Concurso de Proyectos de Innovación</h2>
-      <p>La ceremonia de premiación a los ganadores de los tres primeros lugares del XIX Concurso de Proyectos de Innovación se llevará a cabo este 22 de Mayo de 2026 a las 10:00 a. m. en las instalaciones del <strong>Domo / Auditorio. </strong> Domo / Auditorio. ¡Acompáñanos a reconocer el talento y la innovación de nuestra comunidad!</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card lab-card p-3 text-center h-100">
-          <img src="assets/img/labs/proximamente.png" class="img-fluid mb-3">
-          <h5>Matutino</h5>
+            <ol class="schedule-list">
+              <li class="schedule-item">
+                <time class="program-time" datetime="09:00">09:00</time>
+                <span class="text-secondary">Inauguración oficial</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="09:20">09:20</time>
+                <span class="text-secondary">Exposición de proyectos en laboratorios</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="10:00">10:00</time>
+                <span class="text-secondary">Coffee Break</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="10:20">10:20</time>
+                <span class="text-secondary">Continuación de exposiciones y evaluación técnica</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="13:00">13:00</time>
+                <span class="text-secondary">Entrega de reconocimientos y constancias</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="13:20">13:20</time>
+                <span class="text-secondary">Fotografía grupal oficial (Edificio "L")</span>
+              </li>
+            </ol>
+          </article>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card lab-card p-3 text-center h-100">
-          <img src="assets/img/labs/proximamente.png" class="img-fluid mb-3">
-          <h5>Vespertino</h5>
-        </div>
-      </div>
-    </div>
-      <!-- <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LTEM.png" class="img-fluid mb-3">
-          <h5>Laboratorio LTE</h5>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LTEV.png" class="img-fluid mb-3">
-          <h5>Laboratorio LTE</h5>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LTIM.png" class="img-fluid mb-3">
-          <h5>Laboratorio LTI</h5>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LRDM.png" class="img-fluid mb-3">
-          <h5>Laboratorio LRD</h5>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LISM.png" class="img-fluid mb-3">
-          <h5>Laboratorio LIS</h5>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="card lab-card p-3 text-center">
-          <img src="assets/img/labs/LDSM.png" class="img-fluid mb-3">
-          <h5>Laboratorio LDS</h5>
-        </div>
-      </div>
-    </div>
-  </div> -->
-</section>
 
-<!-- SEDE DEL EVENTO -->
-<section id="sede" class="bg-white">
-  <div class="container">
-    <div class="section-title">
-      <h2>Sede del Evento</h2>
-      <p>Unidad Académica Zapopan – Edificio L</p>
-    </div>
+        <!-- Turno Vespertino -->
+        <div class="col-md-6 col-lg-5">
+          <article class="card-tech p-4 h-100" aria-labelledby="turno-vespertino-title">
+            <header class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+              <h3 id="turno-vespertino-title" class="mb-0 fw-bold text-dark h5">
+                <i class="fa-solid fa-moon me-2 text-primary" aria-hidden="true"></i>Turno Vespertino
+              </h3>
+              <span class="badge bg-light text-secondary border font-mono">16:00 - 20:00</span>
+            </header>
 
-    <div class="row g-4 align-items-center">
-      <div class="col-md-6">
-        <h4>Mapa de la Unidad Académica</h4>
-        <p>Edificio L, sede del evento, perteneciente a la Academia de Ingeniería en Sistemas Computacionales.</p>
-        <img src="./assets/img/labs-ubicacion.jpg"
-             alt="Plano de la sede del evento"
-             class="img-fluid rounded shadow-sm w-100">
-      </div>
-
-      <div class="col-md-6">
-        <h4>Ubicación</h4>
-        <p>Camino Arenero 1101, Zapopan, Jalisco.</p>
-        <div class="ratio ratio-4x3 rounded shadow-sm overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9531.985587338153!2d-103.46917204999999!3d20.705047999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a92008505ae3%3A0xac0da90d95e836af!2sTecnol%C3%B3gico%20Superior%20de%20Jalisco%20Zapopan!5e0!3m2!1ses!2smx!4v1730899030301!5m2!1ses!2smx"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <ol class="schedule-list">
+              <li class="schedule-item">
+                <time class="program-time" datetime="16:00">16:00</time>
+                <span class="text-secondary">Exposición y defensa técnica de proyectos</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="19:00">19:00</time>
+                <span class="text-secondary">Coffee Break y vinculación</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="19:30">19:30</time>
+                <span class="text-secondary">Entrega de reconocimientos a participantes</span>
+              </li>
+              <li class="schedule-item">
+                <time class="program-time" datetime="20:00">20:00</time>
+                <span class="text-secondary">Fotografía grupal oficial (Edificio "L")</span>
+              </li>
+            </ol>
+          </article>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ORGANIZADORES -->
-<section id="organizadores" class="bg-white">
-  <div class="container">
-    <div class="section-title">
-      <h2>Organizadores</h2>
-      <p>Equipo académico responsable del evento</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-1/458610495_10230659795496885_6108370343858437953_n.jpg?stp=c103.31.386.386a_dst-jpg_tt6&cstp=mx386x386&ctp=s200x200&_nc_cat=111&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ogxznYdRAUwQ7kNvwH07oHF&_nc_oc=AdoO2y3KmzgJyrTixH-krhy8RBCL4NfFndrZ-xKG4-V5qZxx9kej9Me0O3IM2MZjF3o&_nc_zt=24&_nc_ht=scontent-qro1-2.xx&_nc_gid=etByCok0QyoZPJYMR4avDQ&_nc_ss=7b2a8&oh=00_AQMlFB3XwhnBQlvaLSQB_dMkmV4904NtB9L09f--NDk-1Q&oe=6ADBEBA6" class="w-100">
-          <div class="card-body text-center">
-            <h6>Nancy Ruiz Monroy</h6>
-            <small>Coordinadora</small>
+  <!-- LABORATORIOS -->
+  <section id="labs" aria-labelledby="labs-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="labs-title">Distribución de Laboratorios</h2>
+        <p>
+          La ceremonia de premiación a los tres primeros lugares se llevará a cabo el 
+          <time datetime="2026-05-22">22 de Mayo de 2026</time> a las 10:00 a. m. en las instalaciones del <strong>Domo / Auditorio</strong>.
+        </p>
+      </header>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <div class="card-tech p-3 text-center">
+            <figure class="bg-light p-2 rounded mb-2 border">
+              <img src="assets/img/labs/proximamente.png" class="img-fluid rounded" alt="Esquema de distribución de laboratorios del turno matutino">
+              <figcaption class="visually-hidden">Mapa de stands matutinos en preparación</figcaption>
+            </figure>
+            <h3 class="fw-bold mb-0 text-dark h6">Matutino</h3>
+            <small class="text-muted font-mono">Próxima asignación de salas</small>
           </div>
         </div>
-      </div>
-     
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent-qro3-1.xx.fbcdn.net/v/t39.30808-6/469069327_10163217223923760_109229725857119630_n.jpg?stp=dst-jpg_tt6&cstp=mx480x480&ctp=s480x480&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8Ta9qShLxQsQ7kNvwHkcDrY&_nc_oc=Adr-13oxHIoo-Jx3K3fCz-b9GlBZS0ajLWE3D3U9IydSCqk6LAhu2b9y4LikC_o0XxM&_nc_zt=23&_nc_ht=scontent-qro3-1.xx&_nc_gid=iJsxyGkT6Fhysah1jj1PRQ&_nc_ss=7b2a8&oh=00_AQMQ2qG1fB2SGrc0ip61Ut_5vK3QpN3f01StLEVThXj5AA&oe=6ADBDC9B" class="w-100">
-          <div class="card-body text-center">
-            <h6>Quinatzin Reyes Gómez</h6>
-            <small>Coordinador</small>
-          </div>
-        </div>
-      </div>
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8NE9LM7TvvDi4sld6PGAmuStd6QfArTsyuqfPSHVEw&s=10" class="w-100">
-          <div class="card-body text-center">
-            <h6>León Miguel Ramos Corchado</h6>
-            <small>Coordinador</small>
-          </div>
-        </div>
-      </div>
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/347629271_194538283519200_3500123676656223234_n.jpg?stp=dst-jpg_tt6&cstp=mx959x960&ctp=s959x960&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=orRd6BK8FI0Q7kNvwG0t9MG&_nc_oc=Adr3en_f-3CuvsCXXUJcDzY_IdwctIdaSRw3Hu-hlTuSv7qTfRiCUe-HE2U3Ae7mLN0&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=JanFxEQhnvlmxkciUPn05A&_nc_ss=7b2a8&oh=00_AQOv552nOq32cMGzawlCpHznqbSBUOWbkATRQ2uCwS7DoA&oe=6ADBEDEB" class="w-100">
-          <div class="card-body text-center">
-            <h6>Irma Toscano Barajas</h6>
-            <small>Colaboradora</small>
-          </div>
-        </div>
-      </div>
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/813976436_938393469326892_8687484536586468731_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2041&ctp=s2048x2041&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VR0E2IxKcOAQ7kNvwFvQz3O&_nc_oc=AdqGXQ5YNK08JhOk0U4viP6x3Xm6NM_7R6tl2zoVzCvnVFisKXjOTa4IdvcapHYV1J0&_nc_zt=23&_nc_ht=scontent-qro1-2.xx&_nc_gid=1dDvcCXs8mg23aBEvjTfAA&_nc_ss=7b2a8&oh=00_AQOI_0zbtaHuk1w4dAzoTFY6_qP9FgmaoqVMXGSRMJuu9A&oe=6ADBE83C" class="w-100">
-          <div class="card-body text-center">
-            <h6>José Luis Garcia Cerpas</h6>
-            <small>Colaborador</small>
-          </div>
-        </div>
-      </div>
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent.fmex9-1.fna.fbcdn.net/v/t39.30808-6/649702332_26236621269313168_1634922824665613780_n.jpg?stp=dst-jpg_tt6&cstp=mx720x720&ctp=s720x720&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=mofZKfEWGRYQ7kNvwGzHjBk&_nc_oc=Adpf4u_THlu2H73uLp3yVaJfYH7fmMcaOGWYh_adRYJH_D0lbeHGIKFvetXZuVS_ieQ&_nc_zt=23&_nc_ht=scontent.fmex9-1.fna&_nc_gid=tfwTGvQaTZ39PPSr0xOtlQ&_nc_ss=7b2a8&oh=00_AQNoeMuHPREYx9dCnqBDND5FcawKA0cMSPX6EB55UC0OLA&oe=6ADC00B8" class="w-100">
-          <div class="card-body text-center">
-            <h6>Fabian Gonzalez Torres </h6>
-            <small>Colaborador</small>
-          </div>
-        </div>
-      </div>
-       <div class="col-sm-6 col-lg-3">
-        <div class="card person-card">
-          <img src="https://scontent-qro3-1.xx.fbcdn.net/v/t39.30808-6/474667810_1639573716933976_3592236700881100202_n.jpg?stp=dst-jpg_tt6&cstp=mx1533x2048&ctp=s1533x2048&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pjpH9zjKBBgQ7kNvwFp8dqi&_nc_oc=Adr-tPYsq44WFyezk4h3i4qLzGFEdJSQ9p2UhVRHodzAfNDUV7J6wjKQfdJn9l6Su4I&_nc_zt=23&_nc_ht=scontent-qro3-1.xx&_nc_gid=YpHmcPE5c-Ix8WkhoYHzjA&_nc_ss=7b2a8&oh=00_AQNM1gKSOtPYijWQVR4r445YHc8-aui5u34Yps_b8SUOjw&oe=6ADBD623" class="w-100">
-          <div class="card-body text-center">
-            <h6> Rigoberto Cardenas Larios</h6>
-            <small>Colaborador</small>
+        <div class="col-md-5">
+          <div class="card-tech p-3 text-center">
+            <figure class="bg-light p-2 rounded mb-2 border">
+              <img src="assets/img/labs/proximamente.png" class="img-fluid rounded" alt="Esquema de distribución de laboratorios del turno vespertino">
+              <figcaption class="visually-hidden">Mapa de stands vespertinos en preparación</figcaption>
+            </figure>
+            <h3 class="fw-bold mb-0 text-dark h6">Vespertino</h3>
+            <small class="text-muted font-mono">Próxima asignación de salas</small>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EMPRESAS ALIADAS -->
-<section id="aliados" class="bg-white">
-  <div class="container">
-    <div class="section-title">
-      <h2>Empresas Aliadas</h2>
-      <p>Organizaciones que apoyan e impulsan la innovación académica</p>
+  <!-- SEDE DEL EVENTO -->
+  <section id="sede" class="bg-white border-top border-bottom border-light-subtle" aria-labelledby="sede-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="sede-title">Sede del Evento</h2>
+        <p class="font-mono">Unidad Académica Zapopan • Edificio L</p>
+      </header>
+
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <article class="card-tech p-3">
+            <h3 class="fw-bold mb-1 h5">Mapa de la Unidad Académica</h3>
+            <p class="text-secondary small mb-3">Edificio L, sede de la Academia de Ingeniería en Sistemas Computacionales.</p>
+            <figure class="mb-0">
+              <img src="./assets/img/labs-ubicacion.jpg" alt="Plano arquitectónico de las instalaciones del Edificio L y laboratorios" class="img-fluid rounded border w-100">
+            </figure>
+          </article>
+        </div>
+
+        <div class="col-md-6">
+          <article class="card-tech p-3">
+            <h3 class="fw-bold mb-1 h5">Ubicación Geográfica</h3>
+            <p class="text-secondary small mb-3">Camino Arenero 1101, Zapopan, Jalisco.</p>
+            <div class="ratio ratio-4x3 rounded overflow-hidden border">
+              <iframe
+                title="Mapa interactivo de Google Maps indicando la ubicación del TecMM Zapopan"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9531.985587338153!2d-103.46917204999999!3d20.705047999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a92008505ae3%3A0xac0da90d95e836af!2sTecnol%C3%B3gico%20Superior%20de%20Jalisco%20Zapopan!5e0!3m2!1ses!2smx!4v1730899030301!5m2!1ses!2smx"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
-    <div class="row g-4 align-items-center justify-content-center">
-      <div class="col-6 col-md-3 text-center">
-        <img src="./assets/img/logos/86854456.png" class="img-fluid" alt="SoftServe">
-      </div>
-      <div class="col-6 col-md-3 text-center">
-        <img src="./assets/img/logos/Recurso 1.png" class="img-fluid" alt="Zegnal Consulting">
-      </div>
-      <div class="col-6 col-md-3 text-center">
-        <img src="./assets/img/logos/34243242.png" class="img-fluid" alt="CodeNation">
-      </div>
-      <div class="col-6 col-md-3 text-center">
-        <img src="./assets/img/logos/47993983.png" class="img-fluid" alt="Secretaría de Educación Jalisco">
+  </section>
+
+  <!-- ORGANIZADORES -->
+  <section id="organizadores" aria-labelledby="organizadores-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="organizadores-title">Comité Académico</h2>
+        <p>Equipo responsable de la coordinación y evaluación del evento</p>
+      </header>
+      
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-1/458610495_10230659795496885_6108370343858437953_n.jpg?stp=c103.31.386.386a_dst-jpg_tt6&cstp=mx386x386&ctp=s200x200&_nc_cat=111&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ogxznYdRAUwQ7kNvwH07oHF&_nc_oc=AdoO2y3KmzgJyrTixH-krhy8RBCL4NfFndrZ-xKG4-V5qZxx9kej9Me0O3IM2MZjF3o&_nc_zt=24&_nc_ht=scontent-qro1-2.xx&_nc_gid=etByCok0QyoZPJYMR4avDQ&_nc_ss=7b2a8&oh=00_AQMlFB3XwhnBQlvaLSQB_dMkmV4904NtB9L09f--NDk-1Q&oe=6ADBEBA6" alt="Fotografía de Nancy Ruiz Monroy, Coordinadora del concurso">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">Nancy Ruiz Monroy</h3>
+              <p class="text-primary small font-mono mb-0">Coordinadora</p>
+            </div>
+          </article>
+        </div>
+       
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent-qro3-1.xx.fbcdn.net/v/t39.30808-6/469069327_10163217223923760_109229725857119630_n.jpg?stp=dst-jpg_tt6&cstp=mx480x480&ctp=s480x480&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8Ta9qShLxQsQ7kNvwHkcDrY&_nc_oc=Adr-13oxHIoo-Jx3K3fCz-b9GlBZS0ajLWE3D3U9IydSCqk6LAhu2b9y4LikC_o0XxM&_nc_zt=23&_nc_ht=scontent-qro3-1.xx&_nc_gid=iJsxyGkT6Fhysah1jj1PRQ&_nc_ss=7b2a8&oh=00_AQMQ2qG1fB2SGrc0ip61Ut_5vK3QpN3f01StLEVThXj5AA&oe=6ADBDC9B" alt="Fotografía de Quinatzin Reyes Gómez, Coordinador">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">Quinatzin Reyes Gómez</h3>
+              <p class="text-primary small font-mono mb-0">Coordinador</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8NE9LM7TvvDi4sld6PGAmuStd6QfArTsyuqfPSHVEw&s=10" alt="Fotografía de León Miguel Ramos Corchado, Coordinador">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">León Miguel Ramos</h3>
+              <p class="text-primary small font-mono mb-0">Coordinador</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/347629271_194538283519200_3500123676656223234_n.jpg?stp=dst-jpg_tt6&cstp=mx959x960&ctp=s959x960&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=orRd6BK8FI0Q7kNvwG0t9MG&_nc_oc=Adr3en_f-3CuvsCXXUJcDzY_IdwctIdaSRw3Hu-hlTuSv7qTfRiCUe-HE2U3Ae7mLN0&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=JanFxEQhnvlmxkciUPn05A&_nc_ss=7b2a8&oh=00_AQOv552nOq32cMGzawlCpHznqbSBUOWbkATRQ2uCwS7DoA&oe=6ADBEDEB" alt="Fotografía de Irma Toscano Barajas, Colaboradora">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">Irma Toscano Barajas</h3>
+              <p class="text-secondary small font-mono mb-0">Colaboradora</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/813976436_938393469326892_8687484536586468731_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2041&ctp=s2048x2041&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VR0E2IxKcOAQ7kNvwFvQz3O&_nc_oc=AdqGXQ5YNK08JhOk0U4viP6x3Xm6NM_7R6tl2zoVzCvnVFisKXjOTa4IdvcapHYV1J0&_nc_zt=23&_nc_ht=scontent-qro1-2.xx&_nc_gid=1dDvcCXs8mg23aBEvjTfAA&_nc_ss=7b2a8&oh=00_AQOI_0zbtaHuk1w4dAzoTFY6_qP9FgmaoqVMXGSRMJuu9A&oe=6ADBE83C" alt="Fotografía de José Luis Garcia Cerpas, Colaborador">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">José Luis Garcia</h3>
+              <p class="text-secondary small font-mono mb-0">Colaborador</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent.fmex9-1.fna.fbcdn.net/v/t39.30808-6/649702332_26236621269313168_1634922824665613780_n.jpg?stp=dst-jpg_tt6&cstp=mx720x720&ctp=s720x720&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=mofZKfEWGRYQ7kNvwGzHjBk&_nc_oc=Adpf4u_THlu2H73uLp3yVaJfYH7fmMcaOGWYh_adRYJH_D0lbeHGIKFvetXZuVS_ieQ&_nc_zt=23&_nc_ht=scontent.fmex9-1.fna&_nc_gid=tfwTGvQaTZ39PPSr0xOtlQ&_nc_ss=7b2a8&oh=00_AQNoeMuHPREYx9dCnqBDND5FcawKA0cMSPX6EB55UC0OLA&oe=6ADC00B8" alt="Fotografía de Fabian Gonzalez Torres, Colaborador">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">Fabian Gonzalez Torres</h3>
+              <p class="text-secondary small font-mono mb-0">Colaborador</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article class="person-card">
+            <img src="https://scontent-qro3-1.xx.fbcdn.net/v/t39.30808-6/474667810_1639573716933976_3592236700881100202_n.jpg?stp=dst-jpg_tt6&cstp=mx1533x2048&ctp=s1533x2048&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pjpH9zjKBBgQ7kNvwFp8dqi&_nc_oc=Adr-tPYsq44WFyezk4h3i4qLzGFEdJSQ9p2UhVRHodzAfNDUV7J6wjKQfdJn9l6Su4I&_nc_zt=23&_nc_ht=scontent-qro3-1.xx&_nc_gid=YpHmcPE5c-Ix8WkhoYHzjA&_nc_ss=7b2a8&oh=00_AQNM1gKSOtPYijWQVR4r445YHc8-aui5u34Yps_b8SUOjw&oe=6ADBD623" alt="Fotografía de Rigoberto Cardenas Larios, Colaborador">
+            <div class="p-3 text-center">
+              <h3 class="fw-bold mb-1 h6">Rigoberto Cardenas</h3>
+              <p class="text-secondary small font-mono mb-0">Colaborador</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="container">
-  <div class="cta">
-    <h2 class="mb-3">¡Participa y conoce los proyectos!</h2>
-    <p class="mb-4">Innovación, tecnología y talento estudiantil en un solo evento.</p>
-    <a href="#inicio" class="btn btn-primary btn-lg">Volver al inicio</a>
-  </div>
-</section>
+  <!-- EMPRESAS ALIADAS -->
+  <section id="aliados" class="bg-white border-top border-light-subtle" aria-labelledby="aliados-title">
+    <div class="container">
+      <header class="section-title">
+        <h2 id="aliados-title">Empresas Aliadas</h2>
+        <p>Organizaciones y entidades colaboradoras que apoyan e impulsan la innovación académica</p>
+      </header>
+      
+      <ul class="row g-4 align-items-center justify-content-center list-unstyled mb-0">
+        <li class="col-6 col-md-3 text-center">
+          <div class="p-3 border rounded bg-white">
+            <img src="./assets/img/logos/86854456.png" class="img-fluid" alt="Logotipo corporativo de SoftServe" style="max-height: 48px;">
+          </div>
+        </li>
+        <li class="col-6 col-md-3 text-center">
+          <div class="p-3 border rounded bg-white">
+            <img src="./assets/img/logos/Recurso 1.png" class="img-fluid" alt="Logotipo corporativo de Zegnal Consulting" style="max-height: 48px;">
+          </div>
+        </li>
+        <li class="col-6 col-md-3 text-center">
+          <div class="p-3 border rounded bg-white">
+            <img src="./assets/img/logos/34243242.png" class="img-fluid" alt="Logotipo oficial de CodeNation" style="max-height: 48px;">
+          </div>
+        </li>
+        <li class="col-6 col-md-3 text-center">
+          <div class="p-3 border rounded bg-white">
+            <img src="./assets/img/logos/47993983.png" class="img-fluid" alt="Logotipo institucional de la Secretaría de Educación Jalisco" style="max-height: 48px;">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- LLAMADA A LA ACCIÓN (CTA) -->
+  <section class="container my-5" aria-labelledby="cta-title">
+    <div class="cta">
+      <h2 id="cta-title" class="fw-bold mb-2 text-dark h3">¿Listo para presentar o presenciar las innovaciones?</h2>
+      <p class="text-secondary mb-4 mx-auto" style="max-width: 550px;">
+        Descubre las soluciones de ingeniería y software preparadas para resolver desafíos contemporáneos.
+      </p>
+      <a href="#inicio" class="btn btn-tech">
+        <i class="fa-solid fa-arrow-up me-2" aria-hidden="true"></i>Volver al inicio
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
 <footer>
   <div class="container py-5">
     <div class="row g-4">
       <div class="col-md-4">
-        <img src="./assets/img/logotsj.png" width="60" class="mb-3">
-        <p class="mb-0">Instituto Tecnológico José Mario Molina Pasquel y Henríquez</p>
-        <small>Unidad Académica Zapopan</small>
+        <img src="./assets/img/logotsj.png" width="45" height="45" class="mb-3" alt="Escudo oficial del TecMM">
+        <p class="text-white mb-1 fw-bold">Instituto Tecnológico José Mario Molina Pasquel y Henríquez</p>
+        <small class="text-muted d-block">Unidad Académica Zapopan</small>
+        <small class="font-mono text-primary d-block mt-2">Academia de Ing. en Sistemas Computacionales</small>
       </div>
 
-      <div class="col-md-4">
-        <h6>Evento</h6>
-        <ul class="list-unstyled">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#programa">Programa</a></li>
-          <li><a href="#labs">Laboratorios</a></li>
-          <li><a href="#organizadores">Organizadores</a></li>
-          <li><a href="#aliados">Empresas aliadas</a></li>
+      <nav class="col-md-4" aria-label="Enlaces rápidos del pie de página">
+        <h3 class="text-white text-uppercase font-mono mb-3 h6" style="letter-spacing: 1px;">Navegación</h3>
+        <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+          <li><a href="#inicio"><i class="fa-solid fa-chevron-right me-1 text-primary" aria-hidden="true" style="font-size: 0.7rem;"></i> Inicio</a></li>
+          <li><a href="#programa"><i class="fa-solid fa-chevron-right me-1 text-primary" aria-hidden="true" style="font-size: 0.7rem;"></i> Agenda / Programa</a></li>
+          <li><a href="#labs"><i class="fa-solid fa-chevron-right me-1 text-primary" aria-hidden="true" style="font-size: 0.7rem;"></i> Distribución de Laboratorios</a></li>
+          <li><a href="#organizadores"><i class="fa-solid fa-chevron-right me-1 text-primary" aria-hidden="true" style="font-size: 0.7rem;"></i> Comité Organizador</a></li>
+          <li><a href="#aliados"><i class="fa-solid fa-chevron-right me-1 text-primary" aria-hidden="true" style="font-size: 0.7rem;"></i> Empresas Aliadas</a></li>
         </ul>
-      </div>
+      </nav>
 
       <div class="col-md-4">
-        <h6>Contacto</h6>
-        <p><strong>Dirección:</strong></p>
-        <p>Cam. Arenero 1101, 45019 Zapopan, Jal.</p>
-        <p><strong>Tel:</strong> 33 3682 1180</p>
-        <p><strong>Email:</strong> ing.sistemas@zapopan.tecmm.edu.mx</p>
-        <div class="mt-2">
-          <a href="https://www.facebook.com/groups/isczapopan" class="me-3"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/tsjzapopan/" class="me-3"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <h3 class="text-white text-uppercase font-mono mb-3 h6" style="letter-spacing: 1px;">Contacto Directo</h3>
+        <address class="small mb-0 not-italic text-secondary">
+          <p class="mb-1"><strong class="text-white">Ubicación:</strong> Camino Arenero 1101, 45019 Zapopan, Jal.</p>
+          <p class="mb-1"><strong class="text-white">Teléfono:</strong> <a href="tel:3336821180">33 3682 1180</a></p>
+          <p class="mb-3"><strong class="text-white">Email:</strong> <a href="mailto:ing.sistemas@zapopan.tecmm.edu.mx">ing.sistemas@zapopan.tecmm.edu.mx</a></p>
+        </address>
+        
+        <div class="d-flex gap-3 fs-5" aria-label="Canales de redes sociales">
+          <a href="https://www.facebook.com/groups/isczapopan" target="_blank" rel="noopener noreferrer" aria-label="Comunidad de Facebook de Ingeniería en Sistemas"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/tsjzapopan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial TecMM Zapopan"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Perfil institucional en X (Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
 
-    <hr class="my-4">
-    <div class="text-center">
-      <small>© 2026 Tecnológico Superior de Jalisco. Todos los derechos reservados.</small>
+    <hr class="my-4" style="border-color: rgba(255,255,255,0.08);">
+    <div class="text-center font-mono small text-secondary">
+      <small>© 2026 Tecnológico Superior de Jalisco. Zapopan, Jalisco. Todos los derechos reservados.</small>
     </div>
   </div>
 </footer>
 
+<!-- MODAL: PÓSTER DEL EVENTO -->
+<div class="modal fade" id="posterModal" tabindex="-1" role="dialog" aria-labelledby="posterModalLabel" aria-modal="true" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-light border-bottom">
+        <h2 class="modal-title fw-bold h6 mb-0" id="posterModalLabel">
+          <i class="fa-solid fa-file-pdf text-danger me-2" aria-hidden="true"></i>Póster – XX Concurso de Proyectos de Innovación
+        </h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+      </div>
+      <div class="modal-body p-0" style="height:78vh;">
+        <iframe title="Documento PDF con la convocatoria y póster oficial del evento" src="./assets/pdf/poster.pdf" style="width:100%; height:100%; border:none;" loading="lazy"></iframe>
+      </div>
+      <div class="modal-footer bg-light border-top">
+        <a href="./assets/pdf/poster.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-tech-outline">
+          <i class="fa-solid fa-up-right-from-square me-1" aria-hidden="true"></i> Abrir en ventana externa
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Establecer la fecha del evento: 25 de noviembre de 2026 a las 09:00:00 AM
-  // Usamos el formato estándar ISO para evitar problemas en navegadores como Safari
   const eventDate = new Date("2026-11-25T09:00:00").getTime();
 
-  // Actualizar la cuenta cada segundo (1000 milisegundos)
   const countdown = setInterval(function() {
     const now = new Date().getTime();
     const distance = eventDate - now;
 
-    // Fórmulas matemáticas para calcular días, horas, minutos y segundos
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Función para añadir un '0' a los números menores de 10 (ej: 09 en vez de 9)
     const formatTime = (time) => time < 10 ? `0${time}` : time;
 
-    // Imprimir los resultados en los elementos HTML
     document.getElementById("cd-days").innerText = formatTime(days);
     document.getElementById("cd-hours").innerText = formatTime(hours);
     document.getElementById("cd-minutes").innerText = formatTime(minutes);
     document.getElementById("cd-seconds").innerText = formatTime(seconds);
 
-    // ¿Qué pasa cuando llega la hora del evento?
     if (distance < 0) {
-      clearInterval(countdown); // Detener el reloj
-      
-      // Poner todo en ceros
+      clearInterval(countdown);
       document.getElementById("cd-days").innerText = "00";
       document.getElementById("cd-hours").innerText = "00";
       document.getElementById("cd-minutes").innerText = "00";
       document.getElementById("cd-seconds").innerText = "00";
-      
-      // Opcional: Cambiar el título por un mensaje de bienvenida
-      document.querySelector(".countdown-section h3").innerText = "¡El evento ha comenzado!";
+      const countdownTitle = document.getElementById("countdown-title");
+      if (countdownTitle) countdownTitle.innerText = "¡El evento ha iniciado!";
     }
   }, 1000);
 </script>
-
-<div class="modal fade" id="posterModal" tabindex="-1"
-     aria-labelledby="posterModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title" id="posterModalLabel">
-          Póster – XX Concurso de Proyectos de Innovación
-        </h5>
-        <button type="button" class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Cerrar"></button>
-      </div>
-
-      <div class="modal-body p-0" style="height:80vh;">
-        <iframe
-          src="./assets/pdf/poster.pdf"
-          style="width:100%; height:100%; border:none;"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <div class="modal-footer">
-        <a href="./assets/pdf/poster.pdf"
-           target="_blank"
-           class="btn btn-outline-secondary">
-          <i class="fa-solid fa-up-right-from-square me-1"></i>
-          Abrir en nueva pestaña
-        </a>
-      </div>
-
-    </div>
-  </div>
-</div>
 </body>
-<!-- Modal: Póster del evento -->
-
 </html>
