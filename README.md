@@ -1,4 +1,4 @@
-# XVIII Concurso de Proyectos de Innovación ISC (Refactorizado)
+# XX Concurso de Proyectos de Innovación ISC (Refactorizado)
 
 Sitio web modernizado, responsivo y accesible para el XVIII Concurso de Proyectos de la Academia de Ingeniería en Sistemas Computacionales del TSJ Zapopan.
 
